@@ -26,6 +26,7 @@ GameObject:
   - 4: {fileID: 438524}
   - 82: {fileID: 8257774}
   - 114: {fileID: 11402242}
+  - 114: {fileID: 11486578}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -223,6 +224,17 @@ MonoBehaviour:
   lightLowIntensity: 0
   fadeSpeed: 7
   musicFadeSpeed: 1
+--- !u!114 &11486578
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171282572f836554e976f2c35453afee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

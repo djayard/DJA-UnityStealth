@@ -24,7 +24,7 @@ public class ScreenFadeInOut : MonoBehaviour
 
     void FadeToBlack()
     {
-        GetComponent<RawImage>().color = Color.Lerp(GetComponent<RawImage>().color, Color.black, fadeSpeed * Time.deltaTime);
+        GetComponent<RawImage>().color = Color.Lerp(GetComponent<RawImage>().color, Color.black, fadeSpeed * 2 * Time.deltaTime);
     }
 
     void StartScene()
