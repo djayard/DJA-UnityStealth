@@ -46,7 +46,7 @@ public class ScreenFadeInOut : MonoBehaviour
 
         if(GetComponent<RawImage>().color.a >= 0.95f)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
     }
 }

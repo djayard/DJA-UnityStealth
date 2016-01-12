@@ -15,7 +15,7 @@ public class EnemyAI : MonoBehaviour
     private PlayerHealth playerHealth;
     private LastPlayerSighting lastPlayerSighting;
     private float chaseTimer;
-    private float patrolTImer;
+    private float patrolTimer;
     private uint wayPointIndex;
 
     void Awake()
@@ -76,20 +76,20 @@ public class EnemyAI : MonoBehaviour
 
         if (nav.destination == lastPlayerSighting.resetPosition || nav.remainingDistance < nav.stoppingDistance)
         {
-            patrolSpeed += Time.deltaTime;
+            patrolTimer += Time.deltaTime;
 
-            if (patrolTImer >= patrolWaitTime)
+            if (patrolTimer >= patrolWaitTime)
             {
                 if (wayPointIndex == patrolWayPoints.Length - 1)
                     wayPointIndex = 0;
                 else
                     ++wayPointIndex;
 
-                patrolTImer = 0f;
+                patrolTimer = 0f;
             }
         }
         else
-            patrolTImer = 0f;
+            patrolTimer = 0f;
 
         nav.destination = patrolWayPoints[wayPointIndex].position;
 
